@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
               http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5"
          xmlns="http://java.sun.com/xml/ns/javaee">
 	<filter>
 		<filter-name>secFilter</filter-name>
-		<filter-class>com.codelaboration.poc.browserid.server.SecurityFilter</filter-class>
+		<filter-class>com.test.poc.browserid.server.SecurityFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>secFilter</filter-name>
 		<url-pattern>/*</url-pattern>
-	</filter-mapping> 
+	</filter-mapping>
 
   <!-- Servlets -->
   <servlet>
     <servlet-name>greetServlet</servlet-name>
-    <servlet-class>com.codelaboration.poc.browserid.server.GreetingServiceImpl</servlet-class>
+    <servlet-class>com.test.poc.browserid.server.GreetingServiceImpl</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>greetServlet</servlet-name>
@@ -25,13 +25,13 @@
 
   <servlet>
     <servlet-name>verifyServlet</servlet-name>
-    <servlet-class>com.codelaboration.poc.browserid.server.VerifyServlet</servlet-class>
+    <servlet-class>com.test.poc.browserid.server.VerifyServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>verifyServlet</servlet-name>
     <url-pattern>/api/verify</url-pattern>
   </servlet-mapping>
-  
+
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>BrowserIDPOC.html</welcome-file>
