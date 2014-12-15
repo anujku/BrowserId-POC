@@ -1,0 +1,2 @@
+serviceClass: com.codelaboration.poc.browserid.client.GreetingService
+path: 7F717CDD6C5770150065974EE87CC52E.gwt.rpc
